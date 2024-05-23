@@ -1,3 +1,4 @@
+
 import PostList from '@/components/posts/PostList'
 import { Button ,User ,Link ,Divider} from '@nextui-org/react'
 import React from 'react'
