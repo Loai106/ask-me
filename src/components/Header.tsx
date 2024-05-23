@@ -9,10 +9,9 @@ import {
 
 } from '@nextui-org/react';
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { FaRegMessage } from "react-icons/fa6";
-import { FaRegUser } from "react-icons/fa";
+import { IoMailOpenOutline } from "react-icons/io5";
+import { IoPersonOutline } from "react-icons/io5";
 import { IoHomeOutline } from "react-icons/io5";
-
 
 
 import { SearchIcon } from './icons/SearchIcon';
@@ -37,16 +36,16 @@ function Header() {
                </NavbarContent>
             <NavbarContent justify="end" className='flex space-x-4'>
                 <NavbarItem>
-                    <Link href="/"><IoHomeOutline className='text-xl'/></Link>
+                    <Link href="/"><IoHomeOutline size="30" className='text-xl'/></Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href="/"><FaRegUser className='text-xl'/></Link>
+                    <Link href="/"><IoPersonOutline size="30" className='text-xl'/></Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href="/inbox"><FaRegMessage className='text-xl'/></Link>
+                    <Link href="/inbox"><IoMailOpenOutline size="30" className='text-xl'/></Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href="/notifications"><IoMdNotificationsOutline className='text-xl'/></Link>
+                    <Link href="/notifications"><IoMdNotificationsOutline size="30" className='text-xl'/></Link>
                 </NavbarItem>
             </NavbarContent>
           
