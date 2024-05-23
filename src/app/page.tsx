@@ -6,3 +6,4 @@ export default function page() {
     <Button color='danger'>Click</Button>
   )
 }
+  
