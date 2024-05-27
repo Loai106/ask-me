@@ -1,11 +1,13 @@
 import React from 'react'
 import Link from "next/link";
+import { signOut } from '@/app/login/actions';
 import {
     Navbar,
     NavbarBrand,
     NavbarContent,
     NavbarItem,
     Input,
+    Button
 
 } from '@nextui-org/react';
 import { IoMdNotificationsOutline } from "react-icons/io";
@@ -47,18 +49,22 @@ function Header() {
                 <NavbarItem>
                     <Link href="/notifications"><IoMdNotificationsOutline size="30" className='text-xl'/></Link>
                 </NavbarItem>
+                <NavbarItem>
+                    <form action={signOut}>
+                    <Button type='submit' color='danger'>Sigh out</Button>
+
+                    </form>
+                </NavbarItem>
+         
+
             </NavbarContent>
-          
             
         </Navbar>
 
-       
         
             </div>
+            
         </div>
-        
-    
-
     </div>
 
         
