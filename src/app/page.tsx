@@ -7,23 +7,6 @@ import { createClient } from '../../utils/supabase/server'
 
 
 
-const checkUserLoggedIn = async () => {
-  const supabase = createClient()
-  const { data, error } = await supabase.auth.getSession();
-
-  if (error) {
-    console.error('Error getting session:', error);
-    redirect('/login');
-  }
-
-  if (data.session) {
-    console.log('User is logged in:', data.session.user);
-    return data.session.user;
-  } else {
-    console.log('No user is logged in');
-    redirect('/login');
-  }
-};
 
 
 
@@ -32,10 +15,15 @@ const checkUserLoggedIn = async () => {
 
 const page = async ()=>{
 
-  const isLogged = checkUserLoggedIn();
-  if (!isLogged) {
-    console.log('home page error')
-    redirect('/login')
+  const supabase = createClient();
+
+  const { data: { user } } = await supabase.auth.getUser()
+
+  if (!user) {
+
+
+    
+    redirect('/login');
   }
 
   return (
